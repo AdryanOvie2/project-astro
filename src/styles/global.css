@@ -1,5 +1,7 @@
 :root{
     --family: system-ui;
+    --accent: 124, 58, 237;
+		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
 }
 html {
     background-color: #f1f5f9;
@@ -19,8 +21,64 @@ html {
     padding: 0;
     margin: 0;
   }
+
+  a{color: inherit;text-decoration: none;}
   
   h1 {
     margin: 1rem 0;
     font-size: 2.5rem;
   }
+  /*  */
+  .text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+
+  /* nav styles */
+
+.nav-links {
+  width: 100%;
+  top: 5rem;
+  left: 48px;
+  background-color: #ff9776;
+  display: none;
+}
+
+.nav-links a {
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover, a:focus {
+  background-color: #4c1d95;
+  color: white;
+}
+
+.expanded {
+  display: unset;
+}
+
+@media screen and (min-width: 636px) {
+  .nav-links {
+    margin-left: 5em;
+    display: block;
+    position: static;
+    width: auto;
+    background: none;
+  }
+
+  .nav-links a {
+    display: inline-block;
+    padding: 15px 20px;
+  }
+
+}
+  /* FIN nav styles */
