@@ -1,63 +1,32 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import menu from '../components/navbar.astro';
+const pageTitle = "Sobre mi";
+const identity = {
+  firstName: "Adrian",
+  country: "Cuba",
+  occupation: "Developer Front-end",
+  hobbies: ["Fútbol", "Viajar", "Playa"],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "Astro", "Redacción de documentos"];
 ---
 
-<Layout title="Sobre mi">
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{pageTitle}</title>
+</head>
+<body>
 	<main>
         <menu/>
         <a href="/">Inicio</a>
         <a href="/about/">Sobre mi</a>
         <a href="/blog/">Blog</a>
-		<h1>Sobre mi</span></h1>
+		<h1>{pageTitle}</span></h1>
         <h2>Producido por EEteam con Astro</h2>
 		<h3>... ¡y mi nuevo sitio Astro!</h3>
         <p>Estoy trabajando en el tutorial introductorio de Astro.</p>
         <p>Este sitio se irá actualizando a medida que vaya completando más partes del tutorial, ¡así que no dejes de visitarlo para ver cómo va mi viaje!</p>
 	</main>
-</Layout>
-
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style>
+</body>
+</html>

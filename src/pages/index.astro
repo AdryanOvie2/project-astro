@@ -2,6 +2,9 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import menu from '../components/navbar.astro';
+
+const pageTitle = "Inicio Astro";
+const admin = "AdryanOvie2";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -11,6 +14,7 @@ import menu from '../components/navbar.astro';
 		<a href="/about/">Sobre mi</a>
 		<a href="/blog/">Blog</a>
 		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
+		<h2>{pageTitle} by {admin}</h2>
 		<p class="instructions">
 			To get started, open the directory <code>src/pages</code> in your project.<br />
 			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
