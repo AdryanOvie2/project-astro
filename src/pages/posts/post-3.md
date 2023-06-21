@@ -1,6 +1,7 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: Mi tercer post en el blog
-author: Astro alumno
+author: "Admin"
 description: "Tuve algunos problemas, pero preguntar en la comunidad me ayudó mucho."
 image: 
     url: "https://astro.build/assets/blog/community-day/cover.jpg"
