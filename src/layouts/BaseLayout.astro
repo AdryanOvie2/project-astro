@@ -11,16 +11,33 @@ const { pageTitle } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body>
     <Header />
     <h1>{pageTitle}</h1>
-<hr>
+
     <slot />
-<hr>
+
     <Footer />
     <script>
       import "../scripts/menu.js";
+
+      declare global {
+        interface Window {
+          netlifyIdentity: any;
+        }
+      }
+
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", ((user: any) => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
     </script>
   </body>
 </html>
