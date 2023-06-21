@@ -3,6 +3,19 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 const { pageTitle } = Astro.props;
+
+
+const imagesDir = await Astro.glob('../images/**/*');
+const image = imagesDir.find(imagesDi => {
+  if (!image) {
+    return false;
+  }
+  if (!imagesDi.default?.src) {
+    return false;
+  }
+  const index = imagesDi.default.src.indexOf('/images/');
+  return imagesDi.default.src.slice(index) === image;
+})
 ---
 <html lang="es">
   <head>

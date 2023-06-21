@@ -2,19 +2,6 @@
 import BaseLayout from './BaseLayout.astro';
 const { frontmatter } = Astro.props;
 
-
-const imagesDir = await Astro.glob('../images/**/*');
-const image = imagesDir.find(imagesDi => {
-  if (!image) {
-    return false;
-  }
-  if (!imagesDi.default?.src) {
-    return false;
-  }
-  const index = imagesDi.default.src.indexOf('/images/');
-  return imagesDi.default.src.slice(index) === image;
-})
-
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
