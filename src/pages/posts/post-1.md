@@ -22,4 +22,4 @@ tags: ["astro", "bloguear", "aprender en público"]
 
 ## Próximos pasos
 
-Terminaré el tutorial de Astro, y luego seguiré añadiendo más posts. Mira este espacio para más por venir.
+Terminaré el tutorial de Astro, y luego seguiré añadiendo más posts. Mira este espacio para más por venir..
