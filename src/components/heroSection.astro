@@ -1,0 +1,25 @@
+---
+import CardHero from './cardHero.astro';
+import BarSearch from './BarSearch.astro';
+---
+
+<div class="
+bg-slate-700 text-black
+min-h-screen 
+bg-hero bg-cover bg-center
+flex flex-col justify-center place-items-center gap-4"
+>
+    <div class="
+    grid grid-cols-2 lg:grid-cols-4 row-auto
+    gap-4
+    rounded 
+    w-8/12 h-4/6 
+    "
+    >
+       <CardHero services="Hoteles" />
+       <CardHero services="Restaurantes" />
+       <CardHero services="Viajes" />
+       <CardHero services="Coches" />
+    </div>
+    <BarSearch />
+</div>

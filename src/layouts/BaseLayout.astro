@@ -1,10 +1,11 @@
 ---
 import Header from '../components/Header.astro';
+import ThemeIcon from '../components/ThemeIcon.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 const { pageTitle } = Astro.props;
 ---
-<html lang="es">
+<html lang="es" class="bg-white text-black">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -13,31 +14,32 @@ const { pageTitle } = Astro.props;
     <title>{pageTitle}</title>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
-  <body>
-    <Header />
-    <h1>{pageTitle}</h1>
-
-    <slot />
-
-    <Footer />
+  <body class="">
+    <Header/>
+    <main class={ pageTitle !== "Inicio" ? 'pt-20' : '' }>
+      <slot /> <!-- contenido -->
+      <ThemeIcon />
+    </main>
+    <!-- <Footer /> -->
     <script>
       import "../scripts/menu.js";
 
+      //admin config netlify
       declare global {
         interface Window {
           netlifyIdentity: any;
         }
       }
 
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", ((user: any) => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", ((user: any) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        }));
       }
-    }));
-  }
     </script>
   </body>
 </html>

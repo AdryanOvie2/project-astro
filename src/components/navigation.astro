@@ -1,10 +1,45 @@
 
 ---
-
+import HamburgerIcon from "./Hamburger.astro";
+import CloseIcon from "./closeIcon.astro";
+//relative flex justify-between
 ---
-<div class="nav-links">
-    <a href="/">Inicio</a>
-    <a href="/about/">Sobre mi</a>
-    <a href="/blog/">Blog</a>
-    <a href="/tags/">Tags</a>
-</div>
+<ul id="menu" class="hidden w-full p-2 absolute top-16 left-0 text-center text-purple-800 md:flex md:w-auto md:relative md:top-auto lef:top-auto md:gap-5">
+    <li class="p-4 bg-purple-500 text-white text-lg md:bg-inherit md:text-inherit">
+        <a class="
+        hover:transitio-all 
+        hover:duration-300 
+        hover:ease-in-out 
+        hover:rounded-xl rounded-xl" href="/">Inicio</a>
+    </li>
+    <li class="p-4 bg-purple-500 text-white text-lg md:bg-inherit md:text-inherit">
+        <a class="
+        hover:transitio-all 
+        hover:duration-300 
+        hover:ease-in-out 
+        hover:rounded-xl rounded-xl" href="/about/">Sobre mi</a>
+    </li>
+    <li class="p-4 bg-purple-500 text-white text-lg md:bg-inherit md:text-inherit">
+        <a class="
+        hover:transitio-all 
+        hover:duration-300 
+        hover:ease-in-out 
+        hover:rounded-xl rounded-xl" href="/blog/">Blog</a>
+    </li>
+    <li class="p-4 bg-purple-500 text-white text-lg md:bg-inherit md:text-inherit">
+        <a class="
+        hover:transitio-all 
+        hover:duration-300 
+        hover:ease-in-out 
+        hover:rounded-xl rounded-xl" href="/tags/">Tags</a>
+    </li>
+</ul>
+
+<!-- icons -->
+<HamburgerIcon />
+<!-- close -->
+<CloseIcon />
+
+<style>
+    .ocultar{display: none;}
+</style>

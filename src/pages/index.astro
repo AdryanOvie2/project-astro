@@ -2,9 +2,11 @@
 import '../styles/global.css';
 
 import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroSection from '../components/heroSection.astro';
 const pageTitle = "Inicio";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-	<h2>Mi impresionante subtítulo del blog 😂🤣</h2>
+	<HeroSection />
+	<!-- <h2>Mi impresionante subtítulo del blog 😂🤣</h2> -->
 </BaseLayout>

@@ -15,21 +15,23 @@ const skills = ["HTML", "CSS", "JavaScript", "Astro", "Redacción de documentos"
 ---
 
 <BaseLayout pageTitle={pageTitle} >
-	<h2>Producido por EEteam con Astro</h2>
-	<h3>... ¡y mi nuevo sitio Astro!</h3>
-	<p>Estoy trabajando en el tutorial introductorio de Astro.</p>
-	<p>Este sitio se irá actualizando a medida que vaya completando más partes del tutorial, ¡así que no dejes de visitarlo para ver cómo va mi viaje!</p>
-	<p>He aquí algunos datos sobre mí:</p>
-	<ul>
-		<li>Me llamo {identity.firstName}.</li>
-		<li>Vivo en {identity.country} y trabajo como {identity.occupation}.</li>
-		{identity.hobbies.length >= 2 && 
-			<li>Dos de mis aficiones son: {identity.hobbies[0]} y {identity.hobbies[1]}</li>
-		} 
-	</ul>
-	<p>Mis habilidades son:</p>
-	<ul>
-		{skills.map((skill) => <li class="skill">{skill}</li>)}
-	</ul>
+	<section id="about" class="container m-auto">
+		<h2>Producido por EEteam con Astro</h2>
+		<h3>... ¡y mi nuevo sitio Astro!</h3>
+		<p>Estoy trabajando en el tutorial introductorio de Astro.</p>
+		<p>Este sitio se irá actualizando a medida que vaya completando más partes del tutorial, ¡así que no dejes de visitarlo para ver cómo va mi viaje!</p>
+		<p>He aquí algunos datos sobre mí:</p>
+		<ul>
+			<li>Me llamo {identity.firstName}.</li>
+			<li>Vivo en {identity.country} y trabajo como {identity.occupation}.</li>
+			{identity.hobbies.length >= 2 && 
+				<li>Dos de mis aficiones son: {identity.hobbies[0]} y {identity.hobbies[1]}</li>
+			} 
+		</ul>
+		<p>Mis habilidades son:</p>
+		<ul>
+			{skills.map((skill) => <li class="skill">{skill}</li>)}
+		</ul>
+	</section>
 </BaseLayout>
 
