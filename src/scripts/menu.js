@@ -1,7 +1,3 @@
-// document.querySelector('.hamburger').addEventListener('click', () => {
-//     document.querySelector('.nav-links').classList.toggle('expanded');
-// });
-
 const menUl = document.getElementById("menu");
 const hamburguerIcon = document.getElementById('hamburguerIcon');
 const closeIcon = document.getElementById("closeIcon");
@@ -11,6 +7,7 @@ let isImg = true;
 
 hamburguerIcon.addEventListener("click", function() {
     menUl.classList.toggle("hidden");
+    console.log("click");
     hamburguerIcon.classList.add("hidden");
     closeIcon.classList.remove("hidden");
 });
