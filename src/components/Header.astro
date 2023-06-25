@@ -9,3 +9,21 @@ import Navigation from "./navigation.astro";
     <Navigation />
     </nav>
 </header>
+
+<script>
+    const menUl = document.getElementById("menu");
+    const hamburguerIcon = document.getElementById('hamburguerIcon');
+    const closeIcon = document.getElementById("closeIcon");
+    hamburguerIcon.addEventListener("click", function() {
+        menUl.classList.toggle("hidden");
+        console.log("click");
+        hamburguerIcon.classList.add("hidden");
+        closeIcon.classList.remove("hidden");
+    });
+
+    closeIcon.addEventListener("click", function() {
+        menUl.classList.toggle("hidden");
+        closeIcon.classList.add("hidden");
+        hamburguerIcon.classList.remove("hidden");
+    });
+</script>
